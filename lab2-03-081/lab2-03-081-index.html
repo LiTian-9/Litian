@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>春韵数字展销平台</title>
+    <style>
+        img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 10px;         
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);  
+    transition: transform 0.3s ease;
+}
+img:hover {
+    transform: scale(1.02);     
+}
+    </style>
+    <link rel="stylesheet" href="CSS/lab2-03-081-index.css">
+</head>
+<body>
+    <header class="header">
+        <div class="logo">
+            <span>春韵数字展销</span>
+        </div>
+        <nav class="nav">
+            <ul>
+                <li><a href="#">首页</a></li>
+                <li><a href="#">图书分类</a></li>
+                <li><a href="#">热门推荐</a></li>
+                <li><a href="#">新书上市</a></li>
+                <li><a href="#">关于我们</a></li>
+            </ul>
+        </nav>
+        <div class="clearfix"></div>
+    </header>
+
+    <main class="main">
+        <aside class="left-sidebar">
+            <h3>图书分类</h3>
+            <ul>
+                <li><a href="#">文学小说</a></li>
+                <li><a href="#">科技计算机</a></li>
+                <li><a href="#">经管励志</a></li>
+                <li><a href="#">生活艺术</a></li>
+                <li><a href="#">少儿读物</a></li>
+                <li><a href="#">教育考试</a></li>
+            </ul>
+        </aside>
+
+        <section class="middle-content">
+            <!-- 第一排：第一列鼠标悬停效果（父相子绝） -->
+            <div class="hover-book">
+                <img src="img/book1.jpeg" alt="畅销图书">
+                <div class="book-info">
+                    <h4>《春韵》畅销书籍折扣季</h4>
+                    <p>限时5折优惠</p>
+                    <button>立即购买</button>
+                </div>
+            </div>
+
+            <h3 class="section-title">热门推荐</h3>
+            <div class="hot-books">
+                <div class="book-item">
+                    <img src="img/book2.jpeg" alt="图书2">
+                    <h4>文学经典</h4>
+                    <p>¥39.9</p>
+                </div>
+                <div class="book-item">
+                    <img src="img/book3.jpeg" alt="图书3">
+                    <h4>科技前沿</h4>
+                    <p>¥59.9</p>
+                </div>
+                <div class="book-item">
+                    <img src="img/book4.jpeg" alt="图书4">
+                    <h4>经管励志</h4>
+                    <p>¥45.9</p>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+
+            <h3 class="section-title">新书上市</h3>
+            <table class="new-books">
+                <thead>
+                    <tr>
+                        <th>图书名称</th>
+                        <th>作者</th>
+                        <th>定价</th>
+                        <th>上市时间</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>《明朝那些事儿》</td>
+                        <td>当年明月</td>
+                        <td>¥68.00</td>
+                        <td>2025-04-01</td>
+                    </tr>
+                    <tr>
+                        <td>《万历十五年》</td>
+                        <td>黄仁宇</td>
+                        <td>¥79.00</td>
+                        <td>2025-03-15</td>
+                    </tr>
+                    <tr>
+                        <td>《杀死一只知更鸟》</td>
+                        <td>哈珀.李</td>
+                        <td>¥58.00</td>
+                        <td>2025-04-10</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <aside class="right-sidebar">
+            <div class="ad-box">
+                <img src="img/book5.jpeg" alt="促销广告">
+                <h4>限时促销</h4>
+                <p>全场图书满100减50</p>
+                <button>立即抢购</button>
+            </div>
+        </aside>
+        <div class="clearfix"></div>
+    </main>
+
+    <footer class="footer">
+        <p>© 2025 春韵数字展销平台 版权所有 | 前端实验作业</p>
+    </footer>
+</body>
