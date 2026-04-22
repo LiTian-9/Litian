@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>春韵数字展销平台</title>
+    <style>
+        img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 10px;         
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);  
+    transition: transform 0.3s ease;
+}
+img:hover {
+    transform: scale(1.02);     
+}
+    </style>
+    <link rel="stylesheet" href="CSS/lab3-03-081-index.css">
+</head>
+<body>
+    <header class="header">
+        <div class="logo">
+            <span>春韵数字展销</span>
+        </div>
+        <nav class="nav">
+            <ul>
+                <li><a href="#">首页</a></li>
+                <li><a href="#">图书分类</a></li>
+                <li><a href="#">热门推荐</a></li>
+                <li><a href="#">新书上市</a></li>
+                <li><a href="#">关于我们</a></li>
+                <li><a href="javascript:;" class="login-btn" id="loginBtnText">登录/注册</a></li>
+            </ul>
+        </nav>
+        <div class="clearfix"></div>
+    </header>
+
+    <div class="modal-overlay" id="modalOverlay">
+        <div class="modal-box">
+            <div class="modal-tabs">
+                <span class="tab active" data-tab="login">登录</span>
+                <span class="tab" data-tab="register">注册</span>
+                <span class="close-btn">×</span>
+            </div>
+            <div class="modal-form login-form active">
+                <div class="form-item">
+                    <label>用户名</label>
+                    <input type="text" id="loginUser" placeholder="请输入用户名">
+                </div>
+                <div class="form-item">
+                    <label>密码</label>
+                    <input type="password" id="loginPwd" placeholder="请输入密码">
+                </div>
+                <div class="form-btn">
+                    <button id="loginBtn">登录</button>
+                    <p class="tips" id="loginTips"></p>
+                </div>
+            </div>
+            <div class="modal-form register-form">
+                <div class="form-item">
+                    <label>用户名</label>
+                    <input type="text" id="regUser" placeholder="请设置用户名">
+                </div>
+                <div class="form-item">
+                    <label>密码</label>
+                    <input type="password" id="regPwd" placeholder="请设置密码">
+                </div>
+                <div class="form-item">
+                    <label>确认密码</label>
+                    <input type="password" id="regPwd2" placeholder="请确认密码">
+                </div>
+                <div class="form-btn">
+                    <button id="regBtn">注册</button>
+                    <p class="tips" id="regTips"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <main class="main">
+        <aside class="left-sidebar">
+            <h3>图书分类</h3>
+            <ul>
+                <li><a href="#">文学小说</a></li>
+                <li><a href="#">科技计算机</a></li>
+                <li><a href="#">经管励志</a></li>
+                <li><a href="#">生活艺术</a></li>
+                <li><a href="#">少儿读物</a></li>
+                <li><a href="#">教育考试</a></li>
+            </ul>
+        </aside>
+
+        <section class="middle-content">
+            <div class="hover-book">
+                <img src="img/book1.jpeg" alt="畅销图书">
+                <div class="book-info">
+                    <h4>《春韵》畅销书籍折扣季</h4>
+                    <p>限时5折优惠</p>
+                    <button>立即购买</button>
+                </div>
+            </div>
+
+            <h3 class="section-title">热门推荐</h3>
+            <div class="hot-books">
+                <div class="book-item">
+                    <img src="img/book2.jpeg" alt="图书2">
+                    <h4>文学经典</h4>
+                    <p>¥39.9</p>
+                </div>
+                <div class="book-item">
+                    <img src="img/book3.jpeg" alt="图书3">
+                    <h4>科技前沿</h4>
+                    <p>¥59.9</p>
+                </div>
+                <div class="book-item">
+                    <img src="img/book4.jpeg" alt="图书4">
+                    <h4>经管励志</h4>
+                    <p>¥45.9</p>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+
+            <h3 class="section-title">新书上市</h3>
+            <table class="new-books">
+                <thead>
+                    <tr>
+                        <th>图书名称</th>
+                        <th>作者</th>
+                        <th>定价</th>
+                        <th>上市时间</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>《明朝那些事儿》</td>
+                        <td>当年明月</td>
+                        <td>¥68.00</td>
+                        <td>2025-04-01</td>
+                    </tr>
+                    <tr>
+                        <td>《万历十五年》</td>
+                        <td>黄仁宇</td>
+                        <td>¥79.00</td>
+                        <td>2025-03-15</td>
+                    </tr>
+                    <tr>
+                        <td>《杀死一只知更鸟》</td>
+                        <td>哈珀.李</td>
+                        <td>¥58.00</td>
+                        <td>2025-04-10</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <aside class="right-sidebar">
+            <div class="ad-box">
+                <img src="img/book5.jpeg" alt="促销广告">
+                <h4>限时促销</h4>
+                <p>全场图书满100减50</p>
+                <button>立即抢购</button>
+            </div>
+        </aside>
+        <div class="clearfix"></div>
+    </main>
+
+    <footer class="footer">
+        <p>© 2025 春韵数字展销平台 版权所有 | 前端实验作业</p>
+    </footer>
+
+    <script>
+        const modalOverlay = document.getElementById('modalOverlay');
+        const loginBtn = document.querySelector('.login-btn');
+        const loginBtnText = document.getElementById('loginBtnText');
+        const closeBtn = document.querySelector('.close-btn');
+        const tabs = document.querySelectorAll('.tab');
+        const loginForm = document.querySelector('.login-form');
+        const registerForm = document.querySelector('.register-form');
+        const loginTips = document.getElementById('loginTips');
+        const regTips = document.getElementById('regTips');
+
+        loginBtn.addEventListener('click', () => {
+            modalOverlay.style.display = 'block';
+        });
+        closeBtn.addEventListener('click', () => {
+            modalOverlay.style.display = 'none';
+            document.getElementById('loginUser').value = '';
+            document.getElementById('loginPwd').value = '';
+            document.getElementById('regUser').value = '';
+            document.getElementById('regPwd').value = '';
+            document.getElementById('regPwd2').value = '';
+            loginTips.textContent = '';
+            regTips.textContent = '';
+        });
+        modalOverlay.addEventListener('click', (e) => {
+            if (e.target === modalOverlay) {
+                modalOverlay.style.display = 'none';
+        }
+    });
+    tabs.forEach(tab => {
+        tab.addEventListener('click', () => {
+            tabs.forEach(t => t.classList.remove('active'));
+            loginForm.classList.remove('active');
+            registerForm.classList.remove('active');
+            tab.classList.add('active');
+            const tabName = tab.dataset.tab;
+            if (tabName === 'login') {
+                loginForm.classList.add('active');
+            } else {
+                registerForm.classList.add('active');
+            }
+        });
+    });
+    document.getElementById('regBtn').addEventListener('click', () => {
+        const username = document.getElementById('regUser').value.trim();
+        const pwd = document.getElementById('regPwd').value.trim();
+        const pwd2 = document.getElementById('regPwd2').value.trim();
+        if (!username) {
+            regTips.textContent = '用户名不能为空！';
+            regTips.style.color = 'red';
+         return;
+        }
+        if (!pwd || pwd.length < 6) {
+            regTips.textContent = '密码长度不能少于6位！';
+            regTips.style.color = 'red';
+            return;
+        }
+        if (pwd !== pwd2) {
+            regTips.textContent = '两次密码输入不一致！';
+            regTips.style.color = 'red';
+            return;
+        }
+        let users = JSON.parse(localStorage.getItem('users')) || [];
+        const isExist = users.some(user => user.username === username);
+        if (isExist) {
+            regTips.textContent = '用户名已存在！';
+            regTips.style.color = 'red';
+            return;
+        }
+        users.push({ username, password: pwd });
+        localStorage.setItem('users', JSON.stringify(users));
+        regTips.textContent = '注册成功！请登录';
+        regTips.style.color = 'green';
+        tabs[0].click();
+    });
+    document.getElementById('loginBtn').addEventListener('click', () => {
+        const username = document.getElementById('loginUser').value.trim();
+        const pwd = document.getElementById('loginPwd').value.trim();
+    
+        if (!username || !pwd) {
+            loginTips.textContent = '用户名或密码不能为空！';
+            loginTips.style.color = 'red';
+            return;
+        }
+
+        let users = JSON.parse(localStorage.getItem('users')) || [];
+        const user = users.find(u => u.username === username && u.password === pwd);
+        if (user) {
+            loginTips.textContent = '登录成功！';
+            loginTips.style.color = 'green';
+            localStorage.setItem('loginStatus', 'true');
+            localStorage.setItem('currentUser', username);
+            setTimeout(() => {
+                modalOverlay.style.display = 'none';
+                loginBtnText.textContent = `欢迎 ${username}（退出）`;
+                loginBtnText.style.pointerEvents = 'auto'; // 恢复点击功能
+            }, 1000);
+        } else {
+            loginTips.textContent = '用户名或密码错误！';
+            loginTips.style.color = 'red';
+        }
+    });
+    loginBtnText.addEventListener('click', () => {
+        if (localStorage.getItem('loginStatus') === 'true') {
+            if (confirm('确定要退出登录吗？')) {
+                localStorage.removeItem('loginStatus');
+                localStorage.removeItem('currentUser');
+                loginBtnText.textContent = '登录/注册';
+            }
+        } else {
+            modalOverlay.style.display = 'block';
+        }
+    });
+
+    window.onload = () => {
+        const isLogin = localStorage.getItem('loginStatus') === 'true';
+        const currentUser = localStorage.getItem('currentUser');
+        if (isLogin && currentUser) {
+            loginBtnText.textContent = `欢迎 ${currentUser}（退出）`;
+        }
+    };
+    </script>
+</body>
+</html>
